@@ -1,0 +1,8 @@
+machine:
+  node:
+    version: stable
+test:
+  override:
+        # “-e” aqui é para fazer o script
+        # parar o processo em caso de error
+    - bash -e scripts/test.sh
