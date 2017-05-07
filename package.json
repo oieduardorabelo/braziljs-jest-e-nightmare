@@ -3,8 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "enzyme": "^2.8.2",
+    "nightmare": "^2.10.0",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "react-test-renderer": "^15.5.4"
   },
   "devDependencies": {
     "react-scripts": "0.9.5"
@@ -12,7 +15,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "react-scripts test --env=jsdom tests/unit",
+    "test:acceptance": "react-scripts test --env=jsdom tests/acceptance",
+    "test:all": "react-scripts test --env=jsdom tests",
+    "test:cov": "react-scripts test --env=jsdom tests --coverage",
     "eject": "react-scripts eject"
   }
 }
